@@ -1,6 +1,7 @@
 # Provenance and known unknowns
 
-This describes the current source candidate, not a completed public data deposit.
+This describes the source lineage and preparation of version v1-anonymous-20261029.
+Remote availability is established only by a dataset asset on the release page.
 
 ## Photographs
 
@@ -9,8 +10,8 @@ statement of redistribution authority. Individual collectors are not named
 during anonymous review. Per-image capture instructions, devices and detailed
 collection conditions are not available in the release-preparation records.
 
-There are 114 staged upright photographs in 13 processing groups. Preparation
-copied their staged bytes without additional pixel changes. Internal recorded
+There are 114 staged upright photographs in 13 processing groups. The frozen local draft
+retains the source staged bytes; this version adds documented privacy processing. Internal recorded
 capture comparisons match 56 staged files and differ for 58; the byte comparison
 does not establish the earlier transformations. The collection must not be
 described as 114 unchanged raw camera captures.
@@ -47,7 +48,12 @@ Every candidate image was available during development. No untouched test split
 or independent-site count is asserted. A previous 134-photo collection lacks an
 authoritative per-image inventory in the checked records; overlap is unknown.
 
-Final image privacy processing and the structured-location publication decision
-remain pending. The eventual release must document any changes and regenerate
-all affected metadata and checksums. Scores from unchanged source inputs must
-not be claimed to reproduce on changed distributed inputs without verification.
+This version applies opaque masks to 81 photographs and strips embedded
+identifying metadata from all 114. JPEGs with masks are re-encoded at quality 95
+with 4:4:4 sampling; masked PNGs use lossless encoding. Unmasked JPEG compressed
+scans and unmasked PNG decoded pixels are preserved. Dimensions, stable IDs,
+region geometry, pairings, task input priors and intrinsics are retained.
+Only anonymous format identifiers in annotation headers are renamed; labels
+are not changed. Per-image operations and hashes are in the processing record.
+Structured task position/heading and separate annotation references remain.
+Scores from older inputs have not been verified on these distributed images.

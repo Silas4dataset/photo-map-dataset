@@ -1,7 +1,7 @@
-# Portable schema v1 — candidate documentation
+# Portable schema v1
 
 All file paths in the manifest and metadata are relative to the package root.
-`img_0001` etc. are stable IDs within this draft, assigned by sorted group and
+`img_0001` etc. are stable IDs within this version, assigned by sorted group and
 source image ID. Region IDs are `<image_id>_r001` etc., retaining source region
 order. The local private ledger maps them back to original IDs. Future versions
 must retain or explicitly map these IDs; do not silently renumber revised scope.
@@ -45,7 +45,14 @@ evaluation map first, then the exported annotation map context, as in the frozen
 evaluation. These maps have distinct roles. Snapshot download dates are unknown
 unless recorded; the export date must not be substituted for them.
 
-`metadata/rights_review.csv` in the source candidate is a pending author workflow,
-not consent evidence. A public summary must omit internal evidence and private
-mappings. Redistribution, privacy and metadata decisions must be explicitly
-resolved before data publication.
+`metadata/rights_review.csv` is an anonymous organizer-declaration and processing
+summary. It is not evidence of individual subject consent, an ethics approval or
+independent verification of ownership. Private rights evidence is not distributed.
+
+`metadata/privacy_processing.json` records per-image operations and mask regions
+as original-image integer xyxy coordinates with exclusive x2/y2 bounds. These
+privacy rectangles are not building annotations or ground-truth regions.
+`privacy_processing` in `images.json` links each image to this record. Image hashes
+and byte sizes refer to this distributed version, not earlier source captures.
+Image dimensions, task priors and camera intrinsics have not been resized or
+recomputed. See PRIVACY.md for review scope and encoding details.

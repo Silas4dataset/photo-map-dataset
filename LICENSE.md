@@ -1,42 +1,32 @@
 # Component licence notice
 
-## Repository documentation
-
-The independently authored documentation in this repository is licensed under
+Photographs in `images/`, independently authored Markdown documentation, and
+the independently authored privacy-processing records are licensed under
 **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**,
-excluding identified third-party material and notices.
+to the extent of the contributors' rights and excluding identified third-party
+material. Noncommercial sharing/adaptation requires attribution, a licence link
+and an indication of changes. Commercial use is not granted by this licence.
+
+Attribution: **Photo–map dataset contributors**, https://github.com/Silas4dataset/photo-map-dataset, exact version used.
 
 - Licence: https://creativecommons.org/licenses/by-nc/4.0/
 - Legal code: https://creativecommons.org/licenses/by-nc/4.0/legalcode.en
-- Attribution: **Photo–map dataset contributors**, with a link to
-  https://github.com/Silas4dataset/photo-map-dataset and the version used.
 
-Noncommercial sharing and adaptation are permitted with appropriate attribution,
-a licence link and an indication of changes. Commercial use is not granted by
-this licence. Statutory exceptions and limitations remain unaffected.
+The map and mixed annotation databases are made available under the applicable
+**Open Database Licence 1.0 (ODbL 1.0)**, including the contributors' database
+rights needed to distribute those databases. OSM-derived contents retain their
+applicable OSM terms. No added NC condition applies to those rights. Database
+licensing does not grant a licence to the separate photograph files.
 
-## Intended data release
+**© OpenStreetMap contributors.**
 
-No photographs, annotations, maps or other dataset payload are currently
-deposited here. The intended terms for photographs and independently created
-author-owned contributions are CC BY-NC 4.0. Final file/field and database-rights
-scope will be provided with the data release. This documentation notice does
-not grant rights in an absent dataset or in third-party material.
-
-## OpenStreetMap
-
-OSM-derived content retains applicable ODbL 1.0 terms and attribution. Any
-database subject to ODbL share-alike obligations must be treated accordingly;
-it is not relicensed wholesale under CC BY-NC. No additional noncommercial
-restriction is imposed on rights granted by ODbL.
-
-© OpenStreetMap contributors.
-
-- Source and attribution: https://www.openstreetmap.org/copyright
+- OSM copyright and attribution: https://www.openstreetmap.org/copyright
 - ODbL 1.0: https://opendatacommons.org/licenses/odbl/1-0/
-- Scope: [LICENSES.md](LICENSES.md)
+- ODbL legal text: https://opendatacommons.org/licenses/odbl/1-0/index.html
+- Exact file/field boundaries: [LICENSES.md](LICENSES.md)
 
-Licensing does not replace privacy review or confer rights a contributor does
-not hold. No blanket claim about the licensing of all trained models or other
-outputs is made. Commercial-permission questions may be raised through repository
-Issues, without a promise that separate permission will be granted.
+Licences grant only rights held by the licensor. Privacy, publicity, trademarks
+and third-party rights are not waived; legal exceptions remain unaffected.
+There is no blanket assertion about the licensing of trained models or outputs.
+Separate commercial-permission requests for NC components may be raised via
+repository Issues without a promise of permission.
