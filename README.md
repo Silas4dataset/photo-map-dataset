@@ -1,86 +1,81 @@
 # Photo–map correspondence dataset
 
-Documentation for a dataset being prepared for anonymous peer review.
+Version: **v1-anonymous-20261029**. Prepared for double-blind peer review; contributor
+identities will be restored when the review process permits disclosure.
 
-**Status: preparation in progress. No dataset ZIP, public data release or DOI is
-available yet.** Final image privacy review, location-release decisions and the
-data-component licence boundaries remain to be completed. This repository is
-currently a documentation workspace.
+114 upright photographs in 13 processing groups support correspondence between
+visible building regions and typed OpenStreetMap (OSM) entities, using coarse
+position and heading priors. All photographs were exposed during development;
+this is not an untouched test set. Groups are not independent-site counts.
 
-## Scope
-
-The current candidate collection contains 114 staged upright photographs in 13
-processing groups for associating visible building regions with typed
-OpenStreetMap (OSM) entities using coarse position and heading priors.
-
-| Quantity | Candidate count |
+| Quantity | Count |
 |---|---:|
 | Photographs | 114 |
 | Processing groups | 13 |
 | Active source regions | 331 |
 | Region–OSM pairings | 325 |
-| Merged identity-evaluable image–OSM instances | 244 |
-| Inactive historical decisions without active geometry | 7 |
+| Merged image-specific typed-OSM identity instances | 244 |
+| Inactive historical decisions without geometry | 7 |
 
-These quantities use different counting units. Counts will be updated if the
-released scope changes. The 13 partially labelled legacy photographs are
-excluded from the candidate collection.
+These counts have different units. Thirteen partially labelled legacy
+photographs are excluded. No new labels were introduced for this release.
 
-All photographs were exposed during development. Processing groups are not
-independent-site counts, and this collection is not an untouched test set.
+## Obtaining and checking the data
 
-## Documentation
+The distribution location is [GitHub Releases](https://github.com/Silas4dataset/photo-map-dataset/releases).
+The dataset ZIP is a separately attached asset; GitHub's automatic **Source code
+(zip)** contains repository files and does not include the dataset asset.
+If the dataset asset is absent, no data deposit has been completed at that URL.
+No DOI is assigned.
 
-- [Dataset card](DATASET_CARD.md): task, source scope, quality and limitations.
-- [Schema](SCHEMA.md): files, fields, coordinates, IDs and annotation decisions.
-- [Protocol](PROTOCOL.md): merged-instance counting and scoring definitions.
-- [Provenance](PROVENANCE.md): collection, preparation and known unknowns.
-- [Licence notice](LICENSE.md) and [component terms](LICENSES.md).
-
-## Planned data release
-
-After the remaining checks, a versioned ZIP and `SHA256SUMS.txt` will be attached
-to a [GitHub Release](https://github.com/Silas4dataset/photo-map-dataset/releases).
-The current source payload is about 623 MB. No final archive size or release
-date has been assigned.
-
-The planned ZIP includes photographs, annotations, method input metadata,
-separate annotation-reference poses, frozen maps, schema, protocol, provenance,
-licence notices and a payload manifest. Executable evaluation, model predictions,
-model weights and an application are not included.
-
-GitHub's automatic **Source code (zip)** contains repository documents, not a
-separately uploaded dataset ZIP. When data are available, download the dataset
-asset and its matching checksum file from the same specific release, then run:
+Download the dataset asset and its matching `SHA256SUMS.txt` from the same
+specific release. Before extracting it, run:
 
 ```sh
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-Record the exact release URL, version and archive SHA256 used in research.
+The ZIP contains a `data_only/` directory. After extraction, verify every file
+against its manifest using [VERIFY.md](VERIFY.md). Record the release URL,
+version and archive SHA256 used in research.
 
-## Reuse and privacy
+## Contents and use
 
-Repository documentation is licensed under CC BY-NC 4.0, excluding identified
-third-party material. The intended terms for the photographs and independently
-created author-owned data contributions are also CC BY-NC 4.0; the final data
-scope and notices must be completed before data publication. Commercial use is
-not granted by those terms. OSM-derived components retain applicable ODbL terms
-without an added noncommercial restriction on OSM rights. See [LICENSES.md](LICENSES.md).
+- `images/`: privacy-processed photographs at the original upright dimensions.
+- `annotations/<group>/`: reviewed geometry, OSM pairings and annotation decisions.
+- `metadata/images.json`: stable IDs, relative paths, dimensions, hashes, actual
+  recorded method priors, derived intrinsics and image-processing records.
+- `metadata/annotation_reference_poses.json`: annotation references, separated
+  from inference inputs; these are not independently surveyed pose ground truth.
+- `metadata/privacy_processing.json`: public mask coordinates, categories and
+  output hashes. Original photographs and private review crops are excluded.
+- `metadata/rights_review.csv`: anonymous summary of organizer-declared rights
+  and the processing performed; private evidence and collector mappings are excluded.
+- `maps/`: frozen, hash-deduplicated OSM maps with roles recorded in the manifest.
+- [Schema](SCHEMA.md), [protocol](PROTOCOL.md), [dataset card](DATASET_CARD.md),
+  [provenance](PROVENANCE.md), [privacy](PRIVACY.md), [licences](LICENSES.md)
+  and `manifest.json`.
 
-Withholding author identities does not anonymize people in photographs or remove
-location information. The final image and structured-location release decisions
-are still pending. Reference poses are for annotation only, not independently
-surveyed camera-pose ground truth or inference inputs. Intrinsics are derived
-values rather than independently measured camera calibration.
+Executable evaluation, model predictions, model weights and an application are
+not included. Inspection and reuse follow the JSON schema. Distributed image
+pixels differ from earlier experiment inputs: no unchanged model-score
+reproduction is claimed without running the method again on this version.
 
-## Citation and contact
+## Reuse, attribution and contact
 
-Author identities are withheld during double-blind review and will be restored
-when the review process permits disclosure. For the documentation, credit
-**Photo–map dataset contributors** and link to this repository. Once a dataset
-release exists, cite its exact version rather than the moving main branch.
+Photographs and independently authored documentation are **CC BY-NC 4.0**:
+noncommercial sharing/adaptation requires attribution, a licence link and an
+indication of changes. Commercial use is outside that grant. OSM and the mixed
+OSM annotation databases retain **ODbL 1.0** obligations without added NC
+conditions on those rights. See the exact file/field scope in [LICENSES.md](LICENSES.md).
+The NC photo component means this is not an unrestricted open-data licence.
 
-Questions about this preparation can be raised through
-[repository Issues](https://github.com/Silas4dataset/photo-map-dataset/issues).
-No personal contact details are published here.
+Credit **Photo–map dataset contributors**, this repository and the exact version.
+OSM attribution: **© OpenStreetMap contributors**. A formal named-author citation
+will follow after review; no named-author or DOI record is fabricated now.
+Questions and corrections: [repository Issues](https://github.com/Silas4dataset/photo-map-dataset/issues).
+For privacy reports, provide the image ID and approximate region without
+reposting personal identifiers; request removal or a corrected version.
+
+Structured positions/headings and visible geography are intentionally retained.
+Withholding contributor identities does not guarantee geographic or author anonymity.
