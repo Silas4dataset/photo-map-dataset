@@ -1,13 +1,13 @@
 # Dataset card
 
-## Task and candidate scope
+## Task and release scope
 
 Single-photo visible-building region to typed OSM entity correspondence, using
-coarse position and heading priors. The candidate contains 114 staged upright
+coarse position and heading priors. This version contains 114 staged upright
 photographs in 13 processing groups, 331 active source regions and 325 pairings.
 The protocol merges these into 244 image-specific typed-OSM identity instances.
 Seven historical decisions have no active geometry. Partially labelled legacy
-photographs are excluded. Counts are provisional until the release scope is fixed.
+photographs are excluded.
 
 ## Collection and annotation
 
@@ -42,16 +42,19 @@ no subset, expansion or increment claim is made.
 
 ## Availability, rights and maintenance
 
-Only documentation is currently present. The intended data ZIP will contain
-photographs, annotations, metadata and maps, but no executable evaluation,
-predictions, weights or application. Documentation alone does not promise model
-result reproduction. The intended data terms are component-specific; see
+This version packages photographs, annotations, metadata and maps, with no
+executable evaluation, predictions, weights or application. The distribution
+location is GitHub Releases; deposition is established only by an actual dataset
+asset on the release page. No DOI is assigned. Terms are component-specific; see
 [LICENSES.md](LICENSES.md).
 
-Final privacy review and the structured-position release decision remain pending.
-No automated metadata or identity-string scan constitutes final visual clearance.
-Any pixel/input changes require updated hashes, scope records and appropriate
-result checks before claiming reproduction on the released files.
+All 114 photographs underwent manual overview review, with selected detail crops
+and output contact-sheet review. Opaque masks were applied to 81 photographs;
+33 had no identifier selected for masking. Embedded identifying metadata was
+removed. Structured task positions/headings and annotation references remain.
+This is not exhaustive full-resolution inspection or a guarantee of anonymity;
+see PRIVACY.md. Re-encoded/masked photographs differ from the old inputs.
+No model results were rerun or claimed reproducible on this version.
 
 Author identities are withheld during review. Dataset corrections will use
 explicit versions and retained checksums, without silently replacing reviewed data.
